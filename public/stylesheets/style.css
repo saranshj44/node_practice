@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova";
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+#modal{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  min-height: 15%;
+  background-color: #fff;
+  color: #636363;
+  box-shadow: 0 0 0 1000px rgba(0,0,0,0.3);
+}
+
+#modal input{
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: 1px solid #e3e3e3;
+  outline-color: royalblue;
+}
+
+#modal input[type="submit"]{
+  background-color: rgb(62, 149, 231);
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+}
+
+#modal #cross{
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 7%;
+  transform: rotate(45deg);
+  font-size: 14px;
+}
+
+#back{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(62, 149, 231);
+}
+
+#left{
+  width: 26%;
+  height: 100%;
+  padding: 70px 30px;
+  background-color: white;
+}
+
+#left h4{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+#left h4 span{
+  opacity: .3;
+}
+
+#left h4 i{
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 13px;
+  color: rgb(190, 76, 235);
+  opacity: 1 !important;
+}
+
+#left h5{
+  color: rgb(190, 76, 235);
+}
+
+#left h5 span{
+  margin-left: 10px;
+}
+
+#left ul{
+  margin-left: 30px;
+  margin-top: 10px;
+  list-style: none;
+}
+#left ul a{
+  text-decoration: none !important;
+}
+
+#left ul li{
+  position: relative;
+  color: #bebebe;
+  margin-bottom: 7px;
+}
+
+#left ul li:hover{
+  cursor: pointer;
+  color: rgb(65, 180, 225);
+}
+
+#left ul li::before{
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 10px;
+  height: 2px;
+  background-color: #dadada;
+}
+
+#right{
+  width: 74%;
+  height: 100%;
+  background-color: yellow;
+}
+
+#postSection{
+  position: relative;
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+  background-color: rgb(245, 245, 245);
+}
+
+#fileOpened{
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 20px;
+  height: 40px;
+  color: #fff;
+  border-radius: 100px;
+  background-color: rgb(51, 179, 211);
+  box-shadow: 0 4px 20px -5px rgb(29, 160, 160);
+}
+
+#fileOpened i{
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 20px;
+  color: white;
+}
+
+#postSection form{
+  width: 100%;
+  height: 85%;
+}
+
+#postSection form input{
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  padding: 0 40px;
+  height: 35px;
+  background-color: rgb(85, 202, 153);
+  color: #fff;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 4px 20px -5px rgb(101, 201, 143);
+}
+
+textarea{
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+textarea::placeholder{
+  font-size: 14px;
+}
+
+#terminal{
+  width: 100%;
+  height: 30%;
+  background-color: rgb(42, 190, 190);
+  padding: 20px;
+  color: rgb(6, 54, 63);
+  font-size: 21px;
+}
+
+#terminal h5{
+  font-family: "Consolas";
+  margin-bottom: 20px;
+}
+
+#terminal h6{
+  color: #fff;
+}
+
+#terminal h6::before{
+  content: '>';
+  margin-right: 20px;
+}
+
+#flex{
+  display: flex;
+  justify-content: space-between;
+}

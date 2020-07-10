@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div id="modal">
+        <i id="cross" class="fa fa-plus"></i>
+        <h3>File Name</h3>
+        <form action="/filecreation" method="post">
+            <input type="text" placeholder="file name" name="filename">
+            <input type="submit">
+        </form>
+    </div>
+    <div id="back">
+        <div id="left">
+            <h4>
+                <span>Folder</span>
+                <div id="icons">
+                    <i id="addFile" class="fa fa-plus"></i>
+                    <a href="/"><i class="fa fa-redo-alt"></i></a>
+                </div> 
+            </h4>
+            <h5><i class="far fa-folder"></i><span>Uploads</span></h5>
+            <ul>
+                <% files.forEach(function(file){ %>
+                    <a href=<%= '/openfile/'+file %>><li><%= file %></li></a>
+                <% }) %>
+            </ul>
+        </div>
+        <div id="right">
+            <div id="postSection">
+            </div>
+            <div id="terminal">
+                <h5>Custom Terminal Developed by Mr. X proud Sheryian.</h5>
+                <h6><%= action %></h6>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#addFile').addEventListener('click', function(){
+            document.querySelector('#modal').style.display = "initial";
+        });
+
+        document.querySelector('#cross').addEventListener('click', function(){
+            document.querySelector('#modal').style.display = "none";
+        });
+    </script>
+</body>
+</html>
